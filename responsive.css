@@ -1,0 +1,359 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+
+}
+
+.header {
+    width: 100vw;
+    min-height: 100vh;
+    /* background-color: yellow; */
+    background-image: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5)), url(banner.png);
+    background-position: center;
+    background-size: cover;
+
+
+}
+
+nav {
+    display: flex;
+    padding: 2% 5%;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+nav img {
+    width: 150px;
+}
+
+nav ul {
+    display: flex;
+
+    align-items: center;
+    list-style: none;
+
+}
+
+nav ul li {
+    text-decoration: none;
+    justify-content: space-around;
+    padding: 8px 13px;
+
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: azure;
+    text-transform: uppercase;
+}
+
+nav ul li a::after {
+    content: " ";
+    width: 0%;
+    height: 3px;
+    background-color: blueviolet;
+    display: block;
+    transition: 0.4s;
+
+}
+span{
+    color: aliceblue;
+    animation-name: ikk;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+
+}
+@keyframes ikk{
+    0%   {top: 0px; left: 0px;  color: red;}
+    25%  {top: 0px; left: 100px;  color: blue;}
+    50%  {top: 100px; left: 100px; color: yellow;}
+    75%  {top: 100px; left: 0px;  color: green;}
+    100% {top: 0px; left: 0px;  color: red;}
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+
+}
+
+nav ul li a:hover {
+    color: rgb(145, 39, 231);
+}
+
+.text {
+    display: block;
+
+    width: 90%;
+    color: aliceblue;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text h1 {
+    font-size: 62px;
+    text-transform: capitalize;
+
+}
+
+.text p {
+    margin: 10px 0 40px;
+    font-size: 20px;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    color: aliceblue;
+    border: 2px solid rgb(209, 202, 202);
+    padding: 12px 34px;
+    background: transparent;
+    cursor: pointer;
+    text-transform: capitalize;
+
+
+}
+
+.btn:hover {
+    background-color: rgb(190, 65, 240);
+    color: black;
+    border: none;
+    transition: 1s;
+}
+
+/* respomsive */
+@media(max-width:700px) {
+    .text h1 {
+        font-size: large;
+
+    }
+
+    .text p {
+        font-size: medium;
+    }
+
+
+}
+
+/*----------------- course--------- */
+
+.course {
+    padding-top: 100px;
+    text-align: center;
+    margin: auto;
+    width: auto;
+
+}
+
+.course h1 {
+    font-size: 46px;
+    font-weight: 600;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 12px;
+    font-style: italic;
+    display: inline-block;
+    padding-bottom: 5px;
+    border-bottom: 5px solid rgb(240, 115, 240);
+    text-decoration: underline;
+    text-transform: capitalize;
+}
+
+.course p {
+    font-size: 20px;
+    padding: 50px 0;
+    color: rgb(161, 180, 197);
+    line-height: 22px;
+    letter-spacing: 2px;
+}
+
+
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin: 0 50px;
+    text-transform: capitalize;
+
+}
+
+/* ------------yee bhi ho sakta hai ------------ */
+
+/* .row{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 30px; */
+
+
+.course-title {
+    background-color: rgb(241, 197, 241);
+    flex-basis: 31%;
+    padding: 20px 12px;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    transition: 0.4s;
+
+}
+
+.course-title p {
+    margin: 10px 0;
+    color: black;
+    align-items: center;
+}
+
+.course-title:hover {
+    box-shadow: 0 0 20px 0 rgba(4, 9, 30, 0.5);
+}
+
+@media(max-width: 700px) {
+    .course h1 {
+        font-size: 20px
+    }
+
+    .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+/*----------- campu------------   */
+
+.campus {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+
+}
+
+.parent {
+    display: flex;
+    margin-top: 50px;
+    margin-left: -80px;
+    padding: 20px;
+    align-items: center;
+    background-position: center;
+    border-radius: 5px;
+
+
+
+}
+
+.child {
+    border-radius: 50px;
+    margin-bottom: 5%;
+    transition: 0.4s;
+
+}
+
+.child img {
+    width: 125%;
+    height: 80%;
+    border-radius: 50px;
+    padding: 20px 50px;
+
+}
+
+.child img:hover {
+    cursor: pointer;
+    box-shadow: black;
+}
+
+.campus h1 {
+    text-transform: capitalize;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+@media(max-width:700px) {
+    .parent {
+        display: block;
+    }
+}
+
+/* facility */
+.facility {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 20px;
+
+}
+
+.facility h1 {
+    text-transform: capitalize;
+    font-size: 40px;
+
+}
+
+.facility p {
+    color: bisque;
+    font-size: 20px;
+    padding-top: 20px;
+    margin-left: 50px;
+    text-align: center;
+}
+
+.parent1 {
+    width: 100%;
+    display: flex;
+
+}
+
+.child1 {
+    flex-basis: 41%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+.child1 img {
+    width: 130%;
+    border-radius: 10%;
+    padding: 20px 70px;
+   
+}
+@media(max-width:700px){
+    .facility{
+        display: block;
+    }
+    .parent1{
+        display: block;
+    }
+}
+
+/* footer */
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+.footer h1{
+    margin-bottom: 20px;
+}
+.icon  {
+ 
+    margin: 45px 13px;
+    cursor: pointer;
+
+}
+.icon i{
+    padding: 20px 20px;
+    font-size: 30px;
+  
+}
+.icon i:hover{
+    color: hotpink;
+}
+.footer h1{
+    text-transform: capitalize;
+    font-size: 40px;
+
+}
